@@ -5,15 +5,16 @@ import Cadastro from './Cadastro';
 import Consulta from './Consulta';
 import Editar from './Edicao';
 import Galeria from './Galeria';
-import { AppBar, Box, Typography } from '@mui/material';
+import { AppBar, Box, Card, CardMedia, Typography } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
       <AppBar sx={{ background: '#900950' }}>
+        <Box component="img" src="img/pata1.jpg" sx={{ width: '6rem', height: '5rem' }}></Box>
         <Typography variant='h3'
-          sx={{ ml: '5rem', mb: '1rem', mt: '1rem', color: 'white', background: '#900950',
-          fontFamily: 'Cursive', WebkitTextStrokeColor: 'black', 
+          sx={{ ml: '6rem', mb: '1rem', mt: '-4rem', color: 'white', background: '#900950',
+          fontFamily: 'Cursive', WebkitTextStrokeColor: 'black', display: 'flex',
           WebkitTextStrokeWidth: '0.1rem', fontWeight: 'bold' }}
         >
           Clínica Veterinária Dra. Rebeca Herdade
@@ -31,7 +32,7 @@ function App() {
                       }} 
               >
                 <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem' }} >
+                                  ml: '2.5rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
                   Consulta
                 </Typography>
               </Box>
@@ -40,28 +41,33 @@ function App() {
                       }} 
               >
                 <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem' }} >
+                                  ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
                       Edição
                 </Typography>
               </Box>
             </div>
 
             <div>
+              <Box component="img" src="img/pata2.jpg" 
+                  sx={{ width: '12rem', height: '10rem', mt: '10rem', ml: '1rem'}} ></Box>
+            </div>
+
+            <div>
               <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          ml: '14rem', ":hover": { background: "#BD126C" }
+                          ml: '2rem', ":hover": { background: "#BD126C" }
                       }} 
               >
                 <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem' }} >
+                                  ml: '2.5rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
                       Cadastro
                 </Typography>
               </Box>
               <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          mt: '8rem', ml: '14rem', ":hover": { background: "#BD126C" }
+                          mt: '8rem', ml: '2rem', ":hover": { background: "#BD126C" }
                       }} 
               >
                 <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem' }} >
+                                  ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
                       Galeria
                 </Typography>
               </Box>
