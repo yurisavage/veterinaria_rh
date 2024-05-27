@@ -1,11 +1,11 @@
-import react, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HashRouter, Link, Route, Routes } from 'react-router-dom';
+import { AppBar, Box, Button, Typography } from '@mui/material';
 import Home from './Home';
-import Cadastro from './Cadastro';
-import Consulta from './Consulta';
-import Editar from './Edicao';
+import Cliente from './Cliente';
+import Clinica from './Clinica';
+import Configuracoes from './Configuracoes';
 import Galeria from './Galeria';
-import { AppBar, Box, Button, Card, CardMedia, Typography } from '@mui/material';
 
 function App() {
 
@@ -43,27 +43,32 @@ function App() {
           <Box sx={{ display: 'flex', background: 'white', border: '0.2rem solid',
                       borderRadius: '20rem', width: '30rem', height: '30rem',
                       ml: '25rem', mt: '-1rem' }}>
-            <div>            
-              <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          ml: '-2rem', ":hover": { background: "#BD126C" }
-                      }} 
-                    onClick={handleClick}
-              >
-                <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '2.5rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
-                  Consulta
-                </Typography>
-              </Box>
-              <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          mt: '8rem', ml: '-2rem', ":hover": { background: "#BD126C" }
-                      }} 
+            <div>   
+              <Link to="/cliente" onClick={handleClick} style={{ textDecoration: 'none' }}>        
+                <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
+                            ml: '-2rem', ":hover": { background: "#BD126C" }
+                        }} 
                       onClick={handleClick}
-              >
-                <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
-                      Edição
-                </Typography>
-              </Box>
+                >
+                  <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
+                                    ml: '2.5rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
+                    Cliente
+                  </Typography>
+                </Box>
+              </Link>
+
+              <Link to="/configuracoes" onClick={handleClick} style={{ textDecoration: 'none' }}>
+                <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
+                            mt: '8rem', ml: '-2rem', ":hover": { background: "#BD126C" }
+                        }} 
+                        onClick={handleClick}
+                >
+                  <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
+                                    ml: '1rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
+                        Configurações
+                  </Typography>
+                </Box>
+              </Link>
             </div>
 
             <div>
@@ -72,26 +77,30 @@ function App() {
             </div>
 
             <div>
-              <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          ml: '2rem', ":hover": { background: "#BD126C" }
-                      }} 
-                    onClick={handleClick}
-              >
-                <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '2.5rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
-                      Cadastro
-                </Typography>
-              </Box>
-              <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
-                          mt: '8rem', ml: '2rem', ":hover": { background: "#BD126C" }
-                      }} 
-                    onClick={handleClick}
-              >
-                <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
-                                  ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
-                      Galeria
-                </Typography>
-              </Box>
+              <Link to="/clinica" onClick={handleClick} style={{ textDecoration: 'none' }}> 
+                <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
+                            ml: '2rem', ":hover": { background: "#BD126C" }
+                        }} 
+                      onClick={handleClick}
+                >
+                  <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
+                                    ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
+                        Clínica
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/galeria" onClick={handleClick} style={{ textDecoration: 'none' }}>
+                <Box sx={{ background: '#900950', borderRadius: '20rem', width: '10rem', height: '10rem',
+                            mt: '8rem', ml: '2rem', ":hover": { background: "#BD126C" }
+                        }} 
+                      onClick={handleClick}
+                >
+                  <Typography sx={{ fontFamily: 'Cursive', color: 'white', fontWeight: 'bold', 
+                                    ml: '3rem', paddingTop: '3.8rem', fontSize: '1.2rem' }} >
+                        Galeria
+                  </Typography>
+                </Box>
+              </Link>
             </div>
           </Box>          
         </Typography> }
@@ -114,9 +123,9 @@ function App() {
           <Typography>
             <Routes>
               <Route path="/" exact element={<Home />}></Route>
-              <Route path="/cadastro" exact element={<Cadastro />}></Route>
-              <Route path="/consulta" exact element={<Consulta />}></Route>
-              <Route path="/edicao" exact element={<Editar />}></Route>
+              <Route path="/cliente" exact element={<Cliente />}></Route>
+              <Route path="/clinica" exact element={<Clinica />}></Route>
+              <Route path="/configuracoes" exact element={<Configuracoes />}></Route>
               <Route path="/galeria" exact element={<Galeria />}></Route>
             </Routes>
           </Typography>
