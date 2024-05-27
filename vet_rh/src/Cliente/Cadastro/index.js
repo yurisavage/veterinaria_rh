@@ -1,48 +1,50 @@
-import { Button, FormControl, FormLabel, Grid, InputLabel, MenuItem, Paper, Select, TextField, Typography } from "@mui/material";
+import { AppBar, Button, FormControl, Grid, InputLabel, MenuItem, Paper, Select, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 
 export default function Cadastro() {
 
     const [responsavel, setResponsavel] = useState('');
-    const [tipo, setTipo] = useState();
-    const [sexo, setSexo] = useState();
-    const [cpf, setCpf] = useState('');
-
-    // const [] = useState('');
-    const [animal, setAnimal] = useState('');
-    const [especie, setEspecie] = useState(null);
-    const [raca, setRaca] = useState('');
+    const [tipo, setTipo] = useState('');
+    const [sexo, setSexo] = useState('');
+    const [cpf, setCpf] = useState('');    
     const [endereco, setEndereco] = useState('');
     const [cidade, setCidade] = useState('');
     const [uf, setUf] = useState('');
     const [telefone, setTelefone] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [email, setEmail] = useState('');
-    const [situacao, setSituacao] = useState();
+    const [situacao, setSituacao] = useState('');
+    const [animal, setAnimal] = useState('');
+    const [especie, setEspecie] = useState('');
+    const [raca, setRaca] = useState('');
+    const [sexoDoAnimal, setSexoDoAnimal] = useState('');
 
     const handleCancelar = () => {
-        console.log('cancelar')
         setResponsavel('');
-        setTipo();
-        setSexo();
-        setCpf(null);
-        setAnimal('');
-        setEspecie(null);
-        setRaca('');
+        setTipo('');
+        setSexo('');
+        setCpf(null);        
         setEndereco('');
         setCidade('');
         setUf('');
         setTelefone('');
         setWhatsapp('');
         setEmail('');
-        setSituacao();
+        setSituacao('');
+        setAnimal('');
+        setEspecie('');
+        setRaca('');
+        setSexoDoAnimal('');
     }
 
   return (
     <>
-      <Grid sx={{ mt: "1rem", ml: "2rem", width: "65rem" }}>
+      <Grid sx={{ mt: "0.5rem", ml: "2rem", width: "65rem" }}>
         <Paper elevation={3} sx={{ mb: '2rem' }}>
-          <div>
+            <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#BD126C' }}>
+                <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Cadastro</Typography>
+            </AppBar>
+            <div>
             <TextField 
                 label="Responsável"
                 value={responsavel}
@@ -55,6 +57,7 @@ export default function Cadastro() {
                 <Select 
                     label="Tipo"
                     value={tipo}
+                    onChange={e => setTipo(e.target.value)}
                 >
                     <MenuItem value={10}>Pessoa Física</MenuItem>
                     <MenuItem value={20}>Pessoa Jurídica</MenuItem>
@@ -66,6 +69,7 @@ export default function Cadastro() {
                 <Select 
                     label="Sexo"
                     value={sexo}
+                    onChange={e => setSexo(e.target.value)}
                 >
                     <MenuItem value={1}>Masculino</MenuItem>
                     <MenuItem value={2}>Feminino</MenuItem>
@@ -136,6 +140,7 @@ export default function Cadastro() {
                 <Select 
                     label="Situação"
                     value={situacao}
+                    onChange={e => setSituacao(e.target.value)}
                 >
                     <MenuItem value={0}>Ativo</MenuItem>
                     <MenuItem value={1}>Inativo</MenuItem>
@@ -175,6 +180,18 @@ export default function Cadastro() {
                 onChange={e => setRaca(e.target.value)}
                 sx={{ width: '20rem', ml: '1rem', mt: '1rem', mb: '1rem'  }}
             ></TextField>
+
+                <FormControl fullWidth sx={{ width: '12rem', mt: '1rem', ml: '1rem' }}>
+                <InputLabel>Sexo do Animal</InputLabel>
+                <Select 
+                    label="Sexo do Animal"
+                    value={sexoDoAnimal}
+                    onChange={e => setSexoDoAnimal(e.target.value)}
+                >
+                    <MenuItem value={1}>Macho</MenuItem>
+                    <MenuItem value={2}>Fêmea</MenuItem>
+                </Select>
+            </FormControl>
           </div>
 
           <div>
