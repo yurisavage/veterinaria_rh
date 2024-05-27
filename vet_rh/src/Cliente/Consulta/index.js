@@ -23,6 +23,7 @@ export default function Consulta() {
           <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#BD126C' }}>
             <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Consulta</Typography>
           </AppBar>
+          
           <div>
             <TextField 
               label="Responsável"
