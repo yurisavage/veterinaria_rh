@@ -106,9 +106,9 @@ function App() {
         </Typography> }
 
         {!oculto && 
-          <Typography sx={{ background: '#900950', height: '9rem', position: 'fixed', width: '100%', top: '0.5rem', zIndex: 1 }}>
+          <Typography sx={{ background: '#900950', height: '8rem', position: 'fixed', width: '100%', top: '0.5rem', zIndex: 10 }}>
             <Button component={Link} to="/" variant="outlined" 
-                  sx={{ mt: '6rem', ml: '4rem', borderColor:'#A6EEE6FF', 
+                  sx={{ mt: '5.5rem', ml: '4rem', borderColor:'#A6EEE6FF', height: '2rem', 
                         color:'#900950', background: 'white', fontWeight: 'bold', fontSize: '1rem',
                         ":hover": { background: "#E7E1E4", color: '#BD126C' }
                       }}
@@ -120,7 +120,7 @@ function App() {
         }
 
         <div>
-          <Typography>
+          <Typography sx= {{ mt: '9rem' }}>
             <Routes>
               <Route path="/" exact element={<Home />}></Route>
               <Route path="/cliente" exact element={<Cliente />}></Route>
