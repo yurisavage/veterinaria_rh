@@ -1,20 +1,41 @@
-import { AppBar, Button, Divider, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { tableHeaders } from "./tableSettings";
+import { AppBar, Button, Divider, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 export default function Consulta() {
 
   const [responsavel, setResponsavel] = useState('');
   const [animal, setAnimal] = useState('');
   const [especie, setEspecie] = useState('');
+  const [users, setUsers] = useState([]);
 
-  const [resultado, setResultado] = useState(null);
+  const [resultado, setResultado] = useState([]);
 
   const handleCancelar = () => {
     setResponsavel('');
     setAnimal('');
     setEspecie('');
+    setResultado([]);
   }
+
+  const handleClick = () => {
+    if (responsavel !== '' || animal !== '' || especie !== ''){
+        const nomeOperador = users.filter(nome => nome.responsavel === responsavel || nome.animal === animal || nome.especie === especie)
+        return setResultado(nomeOperador)
+    }          
+}
+
+  useEffect(() => {
+
+    fetch("./dados/cliente.json", {
+        headers: {
+            Accept: "application/json"
+        }
+    }).then(res => res.json())
+        .then(res => setUsers(res.data))
+    
+  },[])
+
+
 
   return(
     <>
@@ -48,12 +69,12 @@ export default function Consulta() {
                 value={especie}
                 onChange={e => setEspecie(e.target.value)}
                 >
-                  <MenuItem value={1}>Canino</MenuItem>
-                  <MenuItem value={2}>Felino</MenuItem>
-                  <MenuItem value={3}>Pássaros</MenuItem>
-                  <MenuItem value={4}>Réptil</MenuItem>
-                  <MenuItem value={5}>Roedores</MenuItem>
-                  <MenuItem value={6}>S/ Espécie</MenuItem>
+                  <MenuItem value={'Canino'}>Canino</MenuItem>
+                  <MenuItem value={'Felino'}>Felino</MenuItem>
+                  <MenuItem value={'Pássaros'}>Pássaros</MenuItem>
+                  <MenuItem value={'Réptil'}>Réptil</MenuItem>
+                  <MenuItem value={'Roedores'}>Roedores</MenuItem>
+                  <MenuItem value={'S. Espécie'}>S/ Espécie</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -62,22 +83,45 @@ export default function Consulta() {
             <Button variant="outlined" 
                 onClick={handleCancelar}
                 sx={{ mb: '1rem', ml: '46rem' }}
-            >Cancelar</Button>
+            >Limpar</Button>
 
             <Button variant="contained" 
+                onClick={handleClick}
                 sx={{ mb: '1rem', ml: '55rem', mt: '-5rem', diplay: 'flex', background: '#BD126C' }}
-            >Salvar</Button>
+            >Buscar</Button>
           </div>
 
           <Divider/>
           
-          <Table
-            headers={
-              tableHeaders(
-                resultado
-              )
-            }
-          ></Table>
+          <TableContainer>
+                        <Table>
+                            <TableHead>
+                                <TableRow sx= {{ background: '#E7E1E4' }}>
+                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Responsável</TableCell>
+                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Animal</TableCell>
+                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Espécie</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {resultado.length === 0 && users.map((item) => 
+                                    <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.responsavel}</TableCell>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.especie}</TableCell>
+                                    </TableRow>
+                                )}
+
+                                {resultado !== 0 && resultado.map((item) => 
+                                    <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.responsavel}</TableCell>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.especie}</TableCell>
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+
 
         </Paper>
       </Grid>

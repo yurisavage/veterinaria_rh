@@ -15,20 +15,10 @@ export default function ConsultaOperador() {
     }
 
     const handleClick = () => {
-
-        console.log('click -- ', nivelAcesso)
-
         if (operador !== '' || nivelAcesso !== ''){
             const nomeOperador = users.filter(nome => nome.operador === operador || nome.nivelacesso === nivelAcesso)
             return setResultado(nomeOperador)
-            // if (nivelAcesso !== ''){
-            //     const nivelUsuario = nomeOperador.filter(nivel => nivel.nivelacesso === nivelAcesso)
-            //     return setResultado(nivelUsuario)
-            // }else{
-            //     return setResultado(nomeOperador)
-            // }
-        }  
-        
+        }          
     }
     
     useEffect(() => {

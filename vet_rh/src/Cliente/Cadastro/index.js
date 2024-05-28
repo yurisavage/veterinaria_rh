@@ -59,8 +59,8 @@ export default function Cadastro() {
                     value={tipo}
                     onChange={e => setTipo(e.target.value)}
                 >
-                    <MenuItem value={10}>Pessoa Física</MenuItem>
-                    <MenuItem value={20}>Pessoa Jurídica</MenuItem>
+                    <MenuItem value={'PF'}>Pessoa Física</MenuItem>
+                    <MenuItem value={'PJ'}>Pessoa Jurídica</MenuItem>
                 </Select>
             </FormControl>
 
@@ -71,8 +71,8 @@ export default function Cadastro() {
                     value={sexo}
                     onChange={e => setSexo(e.target.value)}
                 >
-                    <MenuItem value={1}>Masculino</MenuItem>
-                    <MenuItem value={2}>Feminino</MenuItem>
+                    <MenuItem value={'Masculino'}>Masculino</MenuItem>
+                    <MenuItem value={'Feminino'}>Feminino</MenuItem>
                 </Select>
             </FormControl>
           </div>
@@ -142,8 +142,8 @@ export default function Cadastro() {
                     value={situacao}
                     onChange={e => setSituacao(e.target.value)}
                 >
-                    <MenuItem value={0}>Ativo</MenuItem>
-                    <MenuItem value={1}>Inativo</MenuItem>
+                    <MenuItem value={'Ativo'}>Ativo</MenuItem>
+                    <MenuItem value={'Inativo'}>Inativo</MenuItem>
                 </Select>
             </FormControl>
           </div>
@@ -163,12 +163,12 @@ export default function Cadastro() {
                     value={especie}
                     onChange={e => setEspecie(e.target.value)}
                 >
-                    <MenuItem value={1}>Canino</MenuItem>
-                    <MenuItem value={2}>Felino</MenuItem>
-                    <MenuItem value={3}>Pássaros</MenuItem>
-                    <MenuItem value={4}>Réptil</MenuItem>
-                    <MenuItem value={5}>Roedores</MenuItem>
-                    <MenuItem value={6}>S/ Espécie</MenuItem>
+                    <MenuItem value={'Canino'}>Canino</MenuItem>
+                    <MenuItem value={'Felino'}>Felino</MenuItem>
+                    <MenuItem value={'Pássaros'}>Pássaros</MenuItem>
+                    <MenuItem value={'Réptil'}>Réptil</MenuItem>
+                    <MenuItem value={'Roedores'}>Roedores</MenuItem>
+                    <MenuItem value={'S/ Espécie'}>S/ Espécie</MenuItem>
                 </Select>
             </FormControl>
           </div>
@@ -188,8 +188,8 @@ export default function Cadastro() {
                     value={sexoDoAnimal}
                     onChange={e => setSexoDoAnimal(e.target.value)}
                 >
-                    <MenuItem value={1}>Macho</MenuItem>
-                    <MenuItem value={2}>Fêmea</MenuItem>
+                    <MenuItem value={'Macho'}>Macho</MenuItem>
+                    <MenuItem value={'Fêmea'}>Fêmea</MenuItem>
                 </Select>
             </FormControl>
           </div>
