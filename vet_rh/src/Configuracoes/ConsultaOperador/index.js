@@ -15,8 +15,12 @@ export default function ConsultaOperador() {
     }
 
     const handleClick = () => {
+
+        if (operador === '' && nivelAcesso === '')
+            handleCancelar()
+
         if (operador !== '' || nivelAcesso !== ''){
-            const nomeOperador = users.filter(nome => nome.operador === operador || nome.nivelacesso === nivelAcesso)
+            const nomeOperador = users.filter(nome => nome.operador.toUpperCase() === operador.toUpperCase() || nome.nivelacesso === nivelAcesso)
             return setResultado(nomeOperador)
         }          
     }
@@ -89,14 +93,14 @@ export default function ConsultaOperador() {
                     <TableContainer>
                         <Table>
                             <TableHead>
-                                <TableRow sx= {{ background: '#E7E1E4' }}>
+                                <TableRow sx= {{ background: '#C8C8C8' }}>
                                     <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Nome</TableCell>
                                     <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Nível de Acesso</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {resultado.length === 0 && users.map((item) => 
-                                    <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
+                                    <TableRow sx={{ ":hover": { background: '#F1ECEC' } }}>
                                         <TableCell sx={{ paddingLeft: '4rem', fontSize: '1.2rem' }}>{item.operador}</TableCell>
                                         <TableCell sx={{ fontSize: '1.2rem' }}>{item.nivelacesso}</TableCell>
                                     </TableRow>

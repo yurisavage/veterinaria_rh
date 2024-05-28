@@ -18,14 +18,19 @@ export default function Consulta() {
   }
 
   const handleClick = () => {
+    if (responsavel === '' && animal === '' && especie === '')
+      handleCancelar()
+
     if (responsavel !== '' || animal !== '' || especie !== ''){
-        const nomeOperador = users.filter(nome => nome.responsavel === responsavel || nome.animal === animal || nome.especie === especie)
+        const nomeOperador = users.filter(nome => nome.responsavel.toUpperCase() === responsavel.toUpperCase() 
+                                          || nome.animal.toUpperCase() === animal.toUpperCase() || nome.especie === especie)
         return setResultado(nomeOperador)
     }          
 }
 
   useEffect(() => {
 
+    setUsers([])
     fetch("./dados/cliente.json", {
         headers: {
             Accept: "application/json"
@@ -96,7 +101,7 @@ export default function Consulta() {
           <TableContainer>
                         <Table>
                             <TableHead>
-                                <TableRow sx= {{ background: '#E7E1E4' }}>
+                                <TableRow sx= {{ background: '#C8C8C8' }}>
                                     <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Responsável</TableCell>
                                     <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Animal</TableCell>
                                     <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Espécie</TableCell>
@@ -104,7 +109,7 @@ export default function Consulta() {
                             </TableHead>
                             <TableBody>
                                 {resultado.length === 0 && users.map((item) => 
-                                    <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
+                                    <TableRow sx={{ ":hover": { background: '#F1ECEC' } }}>
                                         <TableCell sx={{ fontSize: '1.2rem' }}>{item.responsavel}</TableCell>
                                         <TableCell sx={{ fontSize: '1.2rem' }}>{item.animal}</TableCell>
                                         <TableCell sx={{ fontSize: '1.2rem' }}>{item.especie}</TableCell>
