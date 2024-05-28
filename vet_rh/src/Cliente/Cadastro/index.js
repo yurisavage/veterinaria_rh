@@ -42,7 +42,7 @@ export default function Cadastro() {
       <Grid sx={{ mt: "0.5rem", ml: "2rem", width: "65rem" }}>
         <Paper elevation={3} sx={{ mb: '2rem' }}>
             <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#BD126C' }}>
-                <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Cadastro</Typography>
+                <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Cadastro de Cliente</Typography>
             </AppBar>
             <div>
             <TextField 
@@ -201,7 +201,7 @@ export default function Cadastro() {
             >Cancelar</Button>
 
             <Button variant="contained" 
-                sx={{ mb: '1rem', ml: '55rem', mt: '-5rem', diplay: 'flex' }}
+                sx={{ mb: '1rem', ml: '55rem', mt: '-5rem', diplay: 'flex', background: '#BD126C' }}
             >Salvar</Button>
           </div>
 

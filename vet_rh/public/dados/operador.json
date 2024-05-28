@@ -1,0 +1,75 @@
+{
+    "data":
+    [
+        {
+         "id": 1,
+         "operador": "Rebeca Herdade",
+         "cpf": 40271886080,
+         "senha": 28003777,
+         "nivelacesso": "Diretor"
+        },
+        {
+         "id": 2,
+         "operador": "Laís Souza",
+         "cpf": 43150579082,
+         "senha": 14744709,
+         "nivelacesso": "Veterinario"
+        },
+        {
+         "id": 3,
+         "operador": "Larissa Fontes",
+         "cpf": 16521223038,
+         "senha": 84351099,
+         "nivelacesso": "Veterinario"
+        },
+        {
+         "id": 4,
+         "operador": "Joana Cellos",
+         "cpf": 27368081008,
+         "senha": 21166018,
+         "nivelacesso": "Veterinario"
+        },
+        {
+         "id": 5,
+         "operador": "Rosele França",
+         "cpf": 32052041079,
+         "senha": 76213737,
+         "nivelacesso": "Administrativo"
+        },
+        {
+         "id": 6,
+         "operador": "Thiago Irlanda",
+         "cpf": 22405543044,
+         "senha": 17596330,
+         "nivelacesso": "Estagiario"
+        },
+        {
+         "id": 7,
+         "operador": "Edelson Espanha",
+         "cpf": 24851073003,
+         "senha": 642406,
+         "nivelacesso": "Estagiario"
+        },
+        {
+         "id": 8,
+         "operador": "Yuri Zelandês",
+         "cpf": 41303520087,
+         "senha": 57709798,
+         "nivelacesso": "Administrativo"
+        },
+        {
+         "id": 9,
+         "operador": "Jean Jr",
+         "cpf": 84699476058,
+         "senha": 67295643,
+         "nivelacesso": "Veterinario"
+        },
+        {
+         "id": 10,
+         "operador": "Marta Tancredo",
+         "cpf": 99624729034,
+         "senha": 62510474,
+         "nivelacesso": "Administrativo"
+        }
+    ]
+}

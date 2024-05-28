@@ -39,16 +39,16 @@ export default function Cliente() {
                 </Grid>
                 
 
-                {pagina === 'Consulta' ? (
+                {pagina === 'Consulta' &&
                     <Grid sx= {{ mt: '1rem', ml: '10rem', width: '10rem' }}>
                         <Consulta/>
                     </Grid>
-                ) :                
-                (pagina === 'Cadastro' &&
+                }               
+                {pagina === 'Cadastro' &&
                     <Grid sx= {{ mt: '1rem', ml: '10rem', width: '10rem' }}>
                         <Cadastro/>
                     </Grid>
-                )}
+                }
                 
             </Grid>
         </>
