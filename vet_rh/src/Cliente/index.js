@@ -18,7 +18,7 @@ export default function Cliente() {
                     <Paper sx={{ height: '28rem', background: '#E7E1E4', paddingTop: '2rem'}}>
                         <Box
                             onClick={() => handleChoice('Consulta')}
-                            sx={{ ":hover": { background: '#BD126C', color: 'white' } }}
+                            sx={{ ":hover": { background: '#08CFDE', color: 'white' } }}
                         >
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}                                
                             >
@@ -28,7 +28,7 @@ export default function Cliente() {
                         
                         <Box
                             onClick={() => handleChoice('Cadastro')}
-                            sx={{ ":hover": { background: '#BD126C', color: 'white' } }}
+                            sx={{ ":hover": { background: '#08CFDE', color: 'white' } }}
                         >
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}                                
                             >

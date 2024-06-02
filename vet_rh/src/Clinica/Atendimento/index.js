@@ -44,7 +44,7 @@ export default function Atendimento() {
         <>
             <Grid sx={{ mt: "0.5rem", ml: "2rem", width: "65rem" }}>
                 <Paper elevation={3} sx={{ mb: '2rem' }}>
-                    <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#BD126C' }}>
+                    <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#08CFDE' }}>
                         <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Atendimentos</Typography>
                     </AppBar>
 
@@ -70,7 +70,7 @@ export default function Atendimento() {
 
                         <Button variant="contained" 
                             onClick={handleClick}
-                            sx={{ mb: '1rem', ml: '55rem', mt: '-5rem', diplay: 'flex', background: '#BD126C' }}
+                            sx={{ mb: '1rem', ml: '55rem', mt: '-5rem', diplay: 'flex', background: '#08CFDE' }}
                         >Buscar</Button>
                     </div>
 

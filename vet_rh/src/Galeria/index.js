@@ -11,7 +11,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    background: "#ebe480",
+    background: "#C1EBEE",
     borderRadius: '3rem'
   };
 
@@ -66,7 +66,7 @@ return(
             </Card>
         </Grid>
         
-        <Box sx={{ backgroundColor: '#BD126C', borderRadius: '30rem', border: '0.2rem solid', width: 'auto', height: 'auto', mt: 1 }} >
+        <Box sx={{ backgroundColor: '#C1EBEE', borderRadius: '30rem', border: '0.2rem solid', width: 'auto', height: 'auto', mt: 1 }} >
             <Grid container spacing={2} sx={{ ml: 4 }}>
                 {clientes.map((item) => (
                     <>
@@ -76,8 +76,8 @@ return(
                                     component='img' 
                                     image={'img/animais/' + item.id + '.jpg'} 
                                     onClick={() => handleOpen(item)}
-                                    sx={{ borderRadius: '20rem', width: '12rem', height: '12rem',
-                                            ":hover": { width: '11rem', height: '11rem' } }}>
+                                    sx={{ borderRadius: '20rem', width: '12rem', height: '12rem', transition: 'transform 0.3s',
+                                            ":hover": { transform: 'scale(1.5)' } }}>
                                 </CardMedia>
                             </Grid>
                         ) : (
@@ -88,8 +88,8 @@ return(
                                     component='img' 
                                     image={'img/animais/' + item.id + '.jpg'} 
                                     onClick={() => handleOpen(item)}
-                                    sx={{ borderRadius: '20rem', width: '10rem', height: '10rem', mt: 2,
-                                            ":hover": { width: '11rem', height: '11rem' } }}>
+                                    sx={{ borderRadius: '20rem', width: '10rem', height: '10rem', mt: 2, transition: 'transform 0.3s',
+                                            ":hover": { transform: 'scale(1.5)' } }}>
                                 </CardMedia>
                             </Grid>
                         )}
