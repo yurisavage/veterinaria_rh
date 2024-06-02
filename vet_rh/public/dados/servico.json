@@ -1,0 +1,79 @@
+{
+    "data": [
+        {
+         "idServico": 1,
+         "servico": "ULTRASSONOGRAFIA",
+         "valor": "240.00"
+        },
+        {
+         "idServico": 2,
+         "servico": "REVISÃO CLÍNICO GERAL",
+         "valor": "50.00"
+        },
+        {
+         "idServico": 3,
+         "servico": "VACINA",
+         "valor": "69.90"
+        },
+        {
+         "idServico": 4,
+         "servico": "CONSULTA VETERINÁRIA",
+         "valor": "210.00"
+        },
+        {
+         "idServico": 5,
+         "servico": "CASTRAÇÃO",
+         "valor": "250.00"
+        },
+        {
+         "idServico": 6,
+         "servico": "EXAME DE SANGUE",
+         "valor": "124.00"
+        },
+        {
+         "idServico": 7,
+         "servico": "CIRURGIA DE REMOÇÃO DE TUMORES",
+         "valor": "700.00"
+        },
+        {
+         "idServico": 8,
+         "servico": "REMOÇÃO DE TÁRTARO",
+         "valor": "230.00"
+        },
+        {
+         "idServico": 9,
+         "servico": "EMERGENCIAL",
+         "valor": "275.00"
+        },
+        {
+         "idServico": 10,
+         "servico": "INTERNAÇÃO",
+         "valor": "584.00"
+        },
+        {
+         "idServico": 11,
+         "servico": "CONSULTA CARDIOLOGISTA",
+         "valor": "278.00"
+        },
+        {
+         "idServico": 12,
+         "servico": "AMBULATÓRIO",
+         "valor": "85.00"
+        },
+        {
+         "idServico": 13,
+         "servico": "CONSULTA OFTALMOLOGISTA",
+         "valor": "410.00"
+        },
+        {
+         "idServico": 14,
+         "servico": "CONSULTA DERMATOLOGISTA",
+         "valor": "330.00"
+        },
+        {
+         "idServico": 15,
+         "servico": "ACESSO VENOSO",
+         "valor": "83.00"
+        }
+       ]
+}

@@ -21,7 +21,7 @@ export default function Configuracoes(){
                             onClick={() => handleChoice('ConsultaOperador')}
                             sx={{ ":hover": { background: '#BD126C', color: 'white' } }}>
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}>
-                                Consulta
+                                Consultar Operadores
                             </Typography>
                         </Box>
 
@@ -29,7 +29,7 @@ export default function Configuracoes(){
                             onClick={() => handleChoice('Operador')}
                             sx={{ ":hover": { background: '#BD126C', color: 'white' } }}>
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}>
-                                Operador
+                                Cadastrar Operador
                             </Typography>
                         </Box>
                     </Paper>

@@ -22,7 +22,7 @@ export default function Cliente() {
                         >
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}                                
                             >
-                                Consulta
+                                Consultar Clientes
                             </Typography>
                         </Box>
                         
@@ -32,7 +32,7 @@ export default function Cliente() {
                         >
                             <Typography sx={{ ml: '1rem', mt: '1rem', fontSize: '1.2rem' }}                                
                             >
-                                Cadastro
+                                Cadastrar Clientes
                             </Typography>
                         </Box>                        
                     </Paper>

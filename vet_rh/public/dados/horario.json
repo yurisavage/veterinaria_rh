@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+         "id_hora": 1,
+         "horaInicial": "09:00",
+         "horaFinal": "09:30"
+        },
+        {
+         "id_hora": 2,
+         "horaInicial": "09:30",
+         "horaFinal": "09:00"
+        },
+        {
+         "id_hora": 3,
+         "horaInicial": "10:00",
+         "horaFinal": "10:30"
+        },
+        {
+         "id_hora": 4,
+         "horaInicial": "10:30",
+         "horaFinal": "11:00"
+        },
+        {
+         "id_hora": 5,
+         "horaInicial": "11:00",
+         "horaFinal": "11:30"
+        },
+        {
+         "id_hora": 6,
+         "horaInicial": "11:30",
+         "horaFinal": "12:00"
+        },
+        {
+         "id_hora": 7,
+         "horaInicial": "12:00",
+         "horaFinal": "12:30"
+        },
+        {
+         "id_hora": 8,
+         "horaInicial": "12:30",
+         "horaFinal": "13:00"
+        },
+        {
+         "id_hora": 9,
+         "horaInicial": "13:00",
+         "horaFinal": "13:30"
+        },
+        {
+         "id_hora": 10,
+         "horaInicial": "13:30",
+         "horaFinal": "14:00"
+        },
+        {
+         "id_hora": 11,
+         "horaInicial": "14:00",
+         "horaFinal": "14:30"
+        },
+        {
+         "id_hora": 12,
+         "horaInicial": "14:30",
+         "horaFinal": "15:00"
+        },
+        {
+         "id_hora": 13,
+         "horaInicial": "15:00",
+         "horaFinal": "15:30"
+        },
+        {
+         "id_hora": 14,
+         "horaInicial": "15:30",
+         "horaFinal": "16:00"
+        },
+        {
+         "id_hora": 15,
+         "horaInicial": "16:00",
+         "horaFinal": "16:30"
+        },
+        {
+         "id_hora": 16,
+         "horaInicial": "16:30",
+         "horaFinal": "17:00"
+        },
+        {
+         "id_hora": 17,
+         "horaInicial": "17:00",
+         "horaFinal": "17:30"
+        },
+        {
+         "id_hora": 18,
+         "horaInicial": "17:30",
+         "horaFinal": "18:00"
+        },
+        {
+         "id_hora": 19,
+         "horaInicial": "18:00",
+         "horaFinal": "18:30"
+        },
+        {
+         "id_hora": 20,
+         "horaInicial": "18:30",
+         "horaFinal": "19:00"
+        },
+        {
+         "id_hora": 21,
+         "horaInicial": "19:00",
+         "horaFinal": "19:30"
+        },
+        {
+         "id_hora": 22,
+         "horaInicial": "19:30",
+         "horaFinal": "20:00"
+        },
+        {
+         "id_hora": 23,
+         "horaInicial": "20:00",
+         "horaFinal": "20:30"
+        },
+        {
+         "id_hora": 24,
+         "horaInicial": "20:30",
+         "horaFinal": "21:00"
+        }
+       ]
+}

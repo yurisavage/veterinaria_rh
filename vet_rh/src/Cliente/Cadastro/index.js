@@ -42,7 +42,7 @@ export default function Cadastro() {
       <Grid sx={{ mt: "0.5rem", ml: "2rem", width: "65rem" }}>
         <Paper elevation={3} sx={{ mb: '2rem' }}>
             <AppBar sx={{ position: 'relative', mb: 2, zIndex: 1, height: '2rem', background: '#BD126C' }}>
-                <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Cadastro de Cliente</Typography>
+                <Typography sx={{ ml: '1rem', mt: '0.1rem', fontWeight: 'bold', fontSize: '1.3rem' }}>Cadastrar Cliente</Typography>
             </AppBar>
             <div>
             <TextField 
