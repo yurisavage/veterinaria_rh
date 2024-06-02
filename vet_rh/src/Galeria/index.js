@@ -65,46 +65,49 @@ return(
                 ></CardMedia>
             </Card>
         </Grid>
-
-        <Box>
-            {clientes.map((item) => (
-                <>
-                    <CardMedia 
-                        component='img' 
-                        image={'img/animais/' + item.id + '.jpg'} 
-                        onClick={() => handleOpen(item)}
-                        sx={{ borderRadius: '20rem', width: 'auto', height: '10rem', 
-                                ":hover": { height: '11rem'} }}>
-                    </CardMedia>
-
-                    {/* <div>
-                        <Box sx={{ width: '10rem', height: '10rem', borderRadius: '20rem', background: "#900950",
-                                    marginTop: '-2rem', ml: '0.5rem', ":hover": { background: "#6b7132" }
-                        }}
-                            // onClick={() => handleOpen(2)}
-                        >
-                            <Typography sx={{ color: 'white', fontWeight: 'bold', fontSize: '1.5rem', 
-                                                mt: '3.5rem', ml: '2rem', paddingTop: '3.5rem'
-                                            }}
+        
+        <Box sx={{ backgroundColor: '#BD126C', borderRadius: '30rem', border: '0.2rem solid', width: 'auto', height: 'auto', mt: 1 }} >
+            <Grid container spacing={2} sx={{ ml: 4 }}>
+                {clientes.map((item) => (
+                    <>
+                        {item.id % 2 === 0 ? (
+                            <Grid item xs={12} sm={6} md={4} lg={2} >
+                                <CardMedia 
+                                    component='img' 
+                                    image={'img/animais/' + item.id + '.jpg'} 
+                                    onClick={() => handleOpen(item)}
+                                    sx={{ borderRadius: '20rem', width: '12rem', height: '12rem',
+                                            ":hover": { width: '11rem', height: '11rem' } }}>
+                                </CardMedia>
+                            </Grid>
+                        ) : (
+                            <Grid item xs={12} sm={6} md={4} lg={2}
+                                sx={{ ml: 4 }}
                             >
-                                {item.animal}
-                            </Typography>
-                        </Box>
-                    </div> */}
-                </>
-            ))}            
+                                <CardMedia 
+                                    component='img' 
+                                    image={'img/animais/' + item.id + '.jpg'} 
+                                    onClick={() => handleOpen(item)}
+                                    sx={{ borderRadius: '20rem', width: '10rem', height: '10rem', mt: 2,
+                                            ":hover": { width: '11rem', height: '11rem' } }}>
+                                </CardMedia>
+                            </Grid>
+                        )}
+                        
+                    </>
+                ))}     
+            </Grid>       
         </Box>
 
         <Modal
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                sx={{ mr: '15rem' }}
+                aria-describedby="modal-modal-description"                
             >
                 <Box sx={style}>
                     <Card sx={{ borderRadius: '3rem' }}>
-                        <CardMedia component='img' image={imagem} sx={{ height: '15rem', borderRadius: '3rem' }}>                
+                        <CardMedia component='img' image={imagem} sx={{ height: '20rem', borderRadius: '3rem' }}>                
                         </CardMedia>
                     </Card>
                     <Typography id="modal-modal-description" sx={{ mt: 2, fontWeight: 'bold' }}>
