@@ -87,7 +87,7 @@ export default function Consulta() {
           <div>
             <Button variant="outlined" 
                 onClick={handleCancelar}
-                sx={{ mb: '1rem', ml: '46rem' }}
+                sx={{ mb: '1rem', ml: '48rem' }}
             >Limpar</Button>
 
             <Button variant="contained" 
