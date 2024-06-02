@@ -61,12 +61,12 @@ return(
                 <CardMedia
                     component="audio"
                     autoPlay
-                    src=""
+                    src="audio/david-bowie-starman.mp3"
                 ></CardMedia>
             </Card>
         </Grid>
         
-        <Box sx={{ backgroundColor: '#C1EBEE', borderRadius: '30rem', border: '0.2rem solid', width: 'auto', height: 'auto', mt: 1 }} >
+        <Box sx={{ backgroundColor: '#C1EBEE', borderRadius: '30rem', width: 'auto', height: 'auto', mt: 1 }} >
             <Grid container spacing={2} sx={{ ml: 4 }}>
                 {clientes.map((item) => (
                     <>
