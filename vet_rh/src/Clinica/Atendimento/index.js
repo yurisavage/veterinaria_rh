@@ -80,28 +80,28 @@ export default function Atendimento() {
                         <Table>
                             <TableHead>
                                 <TableRow sx= {{ background: '#C8C8C8' }}>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Responsável</TableCell>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Animal</TableCell>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Serviço</TableCell>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Valor</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Responsável</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Animal</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Serviço</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Valor</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {resultado.length === 0 && atendimentos.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#F1ECEC' } }}>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.responsavel}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.animal}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.servico}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.valor}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.responsavel}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.servico}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.valor}</TableCell>
                                     </TableRow>
                                 )}
 
                                 {resultado !== 0 && resultado.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.responsavel}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.animal}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.servico}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.valor}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.responsavel}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.servico}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.valor}</TableCell>
                                     </TableRow>
                                 )}
                             </TableBody>

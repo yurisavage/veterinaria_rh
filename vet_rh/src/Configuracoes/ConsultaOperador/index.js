@@ -94,22 +94,22 @@ export default function ConsultaOperador() {
                         <Table>
                             <TableHead>
                                 <TableRow sx= {{ background: '#C8C8C8' }}>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Nome</TableCell>
-                                    <TableCell sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Nível de Acesso</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold', paddingLeft: '8rem' }}>Nome</TableCell>
+                                    <TableCell sx={{ fontSize: '1.1rem', fontWeight: 'bold' }}>Nível de Acesso</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {resultado.length === 0 && users.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#F1ECEC' } }}>
-                                        <TableCell sx={{ paddingLeft: '4rem', fontSize: '1.2rem' }}>{item.operador}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.nivelacesso}</TableCell>
+                                        <TableCell sx={{ paddingLeft: '4rem', fontSize: '1rem' }}>{item.operador}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nivelacesso}</TableCell>
                                     </TableRow>
                                 )}
 
                                 {resultado !== 0 && resultado.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
-                                        <TableCell sx={{ paddingLeft: '4rem', fontSize: '1.2rem' }}>{item.operador}</TableCell>
-                                        <TableCell sx={{ fontSize: '1.2rem' }}>{item.nivelacesso}</TableCell>
+                                        <TableCell sx={{ paddingLeft: '4rem', fontSize: '1rem' }}>{item.operador}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nivelacesso}</TableCell>
                                     </TableRow>
                                 )}
                             </TableBody>
