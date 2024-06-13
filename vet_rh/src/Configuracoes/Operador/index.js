@@ -34,6 +34,7 @@ export default function Operador() {
                             value={operador}
                             onChange={e => setOperador(e.target.value)}
                             sx={{ width: '30rem', ml: '1rem', mt: '1rem' }}
+                            size="small"
                         ></TextField>
 
                         <TextField 
@@ -41,6 +42,7 @@ export default function Operador() {
                             value={cpf}
                             onChange={e => setCpf(e.target.value)}
                             sx={{ width: '13rem', ml: '1rem', mt: '1rem' }}
+                            size="small"
                         ></TextField>
                     </div>
 
@@ -50,6 +52,7 @@ export default function Operador() {
                             value={senha}
                             onChange={e => setSenha(e.target.value)}
                             sx={{ width: '20rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                            size="small"
                         ></TextField>
 
                         <TextField 
@@ -57,16 +60,18 @@ export default function Operador() {
                             value={confirmaSenha}
                             onChange={e => SetConfirmaSenha(e.target.value)}
                             sx={{ width: '20rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                            size="small"
                         ></TextField>                        
                     </div>
 
                     <div>
                         <FormControl fullWidth sx={{ width: '13rem', mt: '1rem', ml: '1rem', mb: '1rem' }}>
-                            <InputLabel>Nível de Acesso</InputLabel>
+                            <InputLabel sx={{ top: '-0.5rem' }}>Nível de Acesso</InputLabel>
                             <Select 
                                 label="Nível de Acesso"
                                 value={nivelAcesso}
                                 onChange={e => setNivelAcesso(e.target.value)}
+                                size="small"
                                 >
                                 <MenuItem>
                                     <em>Selecione uma opção</em>

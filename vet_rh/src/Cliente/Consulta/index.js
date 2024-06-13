@@ -1,5 +1,6 @@
 import { AppBar, Button, Divider, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import api from "../../service/apiService";
 
 export default function Consulta() {
 
@@ -21,22 +22,47 @@ export default function Consulta() {
     if (responsavel === '' && animal === '' && especie === '')
       handleCancelar()
 
-    if (responsavel !== '' || animal !== '' || especie !== ''){
-        const nomeOperador = users.filter(nome => nome.responsavel.toUpperCase() === responsavel.toUpperCase() 
-                                          || nome.animal.toUpperCase() === animal.toUpperCase() || nome.especie === especie)
-        return setResultado(nomeOperador)
-    }          
+    let payload= {
+      'nome': responsavel || '',
+      'nomeAnimal': animal || '',
+      'especie': especie || null
+    }
+
+    console.log('payload -- ', payload)
+
+    api.post('cliente/consultacliente', payload)
+    .then(response => {
+      setResultado(response.data)
+    })
+    .catch(error => {
+      console.log('erro -- ', error)
+    })
+
+    // if (responsavel !== '' || animal !== '' || especie !== ''){
+    //     const nomeOperador = users.filter(nome => nome.responsavel.toUpperCase() === responsavel.toUpperCase() 
+    //                                       || nome.animal.toUpperCase() === animal.toUpperCase() || nome.especie === especie)
+    //     return setResultado(nomeOperador)
+    // }          
   }
 
   useEffect(() => {
 
     setUsers([])
-    fetch("./dados/cliente.json", {
-        headers: {
-            Accept: "application/json"
-        }
-    }).then(res => res.json())
-        .then(res => setUsers(res.data))
+    api.get('cliente/listaclientes')
+    .then(response => {
+      setUsers(response.data)
+    })
+    .catch(error => {
+      console.log('error -- ', error)
+    })
+
+
+    // fetch("./dados/cliente.json", {
+    //     headers: {
+    //         Accept: "application/json"
+    //     }
+    // }).then(res => res.json())
+    //     .then(res => setUsers(res.data))
     
   },[])
 
@@ -56,6 +82,7 @@ export default function Consulta() {
               value={responsavel}
               onChange={e => setResponsavel(e.target.value)}
               sx={{ width: '30rem', ml: '1rem', mt: '1rem' }}
+              size="small"
             ></TextField>
           </div>
 
@@ -65,21 +92,23 @@ export default function Consulta() {
               value={animal}
               onChange={e => setAnimal(e.target.value)}
               sx={{ width: '30rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+              size="small"
             ></TextField>
 
             <FormControl fullWidth sx={{ width: '10rem', mt: '1rem', ml: '1rem' }}>
-              <InputLabel>Espécie</InputLabel>
+              <InputLabel sx={{ top: '-0.5rem' }}>Espécie</InputLabel>
               <Select 
                 label="Espécie"
                 value={especie}
                 onChange={e => setEspecie(e.target.value)}
+                size="small"
                 >
-                  <MenuItem value={'Canino'}>Canino</MenuItem>
-                  <MenuItem value={'Felino'}>Felino</MenuItem>
-                  <MenuItem value={'Pássaros'}>Pássaros</MenuItem>
-                  <MenuItem value={'Réptil'}>Réptil</MenuItem>
-                  <MenuItem value={'Roedores'}>Roedores</MenuItem>
-                  <MenuItem value={'S. Espécie'}>S/ Espécie</MenuItem>
+                  <MenuItem value={1}>Canino</MenuItem>
+                  <MenuItem value={2}>Felino</MenuItem>
+                  <MenuItem value={3}>Pássaros</MenuItem>
+                  <MenuItem value={4}>Réptil</MenuItem>
+                  <MenuItem value={5}>Roedores</MenuItem>
+                  <MenuItem value={6}>S/ Espécie</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -110,16 +139,16 @@ export default function Consulta() {
                             <TableBody>
                                 {resultado.length === 0 && users.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#F1ECEC' } }}>
-                                        <TableCell sx={{ fontSize: '1rem' }}>{item.responsavel}</TableCell>
-                                        <TableCell sx={{ fontSize: '1rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nome}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nomeAnimal}</TableCell>
                                         <TableCell sx={{ fontSize: '1rem' }}>{item.especie}</TableCell>
                                     </TableRow>
                                 )}
 
                                 {resultado !== 0 && resultado.map((item) => 
                                     <TableRow sx={{ ":hover": { background: '#E7E1E4' } }}>
-                                        <TableCell sx={{ fontSize: '1rem' }}>{item.responsavel}</TableCell>
-                                        <TableCell sx={{ fontSize: '1rem' }}>{item.animal}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nome}</TableCell>
+                                        <TableCell sx={{ fontSize: '1rem' }}>{item.nomeAnimal}</TableCell>
                                         <TableCell sx={{ fontSize: '1rem' }}>{item.especie}</TableCell>
                                     </TableRow>
                                 )}

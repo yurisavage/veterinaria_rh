@@ -54,6 +54,7 @@ export default function Atendimento() {
                             value={responsavel}
                             onChange={e => setResponsavel(e.target.value)}
                             sx={{ width: '30rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                            size="small"
                         ></TextField>
 
                         <TextField
@@ -61,6 +62,7 @@ export default function Atendimento() {
                             value={animal}
                             onChange={e => setAnimal(e.target.value)}
                             sx={{ width: '20rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                            size="small"
                         ></TextField>
                         
                         <Button variant="outlined" 

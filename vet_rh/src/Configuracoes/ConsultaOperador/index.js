@@ -53,16 +53,18 @@ export default function ConsultaOperador() {
                         value={operador}
                         onChange={e => setOperador(e.target.value)}
                         sx={{ width: '30rem', ml: '1rem', mt: '1rem' }}
+                        size="small"
                         ></TextField>
                     </div>
                     
                     <div>
                         <FormControl fullWidth sx={{ width: '13rem', mt: '1rem', ml: '1rem', mb: '1rem' }}>
-                            <InputLabel>Nível de Acesso</InputLabel>
+                            <InputLabel sx={{ top: '-0.5rem' }}>Nível de Acesso</InputLabel>
                             <Select 
                                 label="Nível de Acesso"
                                 value={nivelAcesso}
                                 onChange={e => setNivelAcesso(e.target.value)}
+                                size="small"
                                 >
                                 <MenuItem>
                                     <em>Selecione uma opção</em>

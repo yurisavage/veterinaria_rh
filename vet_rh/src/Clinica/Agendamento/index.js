@@ -111,12 +111,13 @@ export default function Agendamento() {
                     <div>
                         <FormControl sx={{ m: 1, minWidth: 120 }}>
                             <Grid>
-                                <InputLabel sx={{ ml: '1rem', mt: '1rem' }}>Hora Inicial</InputLabel>
+                                <InputLabel sx={{ ml: '1rem', top: '0.5rem' }}>Hora Inicial</InputLabel>
                                 <Select
                                     label="Hora Inicial"
                                     value={horaInicial}                    
                                     MenuProps={MenuProps}            
                                     sx={{ width: '8rem', ml: '1rem', mt: '1rem' }}
+                                    size="small"
                                 >
                                     {horario.map((hora) => (
                                         <MenuItem value={hora.horaInicial}
@@ -128,6 +129,7 @@ export default function Agendamento() {
                                     label="Hora Final"                        
                                     value={horaFinal}
                                     sx={{ width: '8rem', ml: '1rem', mt: '1rem' }}
+                                    size="small"
                                 ></TextField>
                             </Grid>                       
                         </FormControl>
@@ -140,6 +142,7 @@ export default function Agendamento() {
                                     value={colaborador}                                    
                                     MenuProps={MenuProps}
                                     sx={{ width: '25rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                                    size="small"
                                 >
                                     {colaboradores.map((user) => (
                                         <MenuItem 
@@ -151,12 +154,13 @@ export default function Agendamento() {
                             </FormControl>
 
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
-                                <InputLabel sx={{ ml: '1rem', mt: '1rem' }}>Serviço</InputLabel>
+                                <InputLabel sx={{ ml: '1rem', top: '0.5rem' }}>Serviço</InputLabel>
                                 <Select
                                     label="Serviço"
                                     value={servico}                                    
                                     MenuProps={MenuProps}
                                     sx={{ width: '25rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                                    size="small"
                                 >
                                     {servicos.map((item) => (
                                         <MenuItem
@@ -171,12 +175,13 @@ export default function Agendamento() {
                         <div>
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
                                 <Grid>
-                                    <InputLabel sx={{ ml: '1rem', mt: '1rem' }}>Responsável</InputLabel>
+                                    <InputLabel sx={{ ml: '1rem', top: '0.5rem' }}>Responsável</InputLabel>
                                     <Select
                                         label="Responsável"
                                         value={responsavel}
                                         MenuProps={MenuProps}
                                         sx={{ width: '25rem', ml: '1rem', mt: '1rem', mb: '1rem' }}
+                                        size="small"
                                     >
                                         {clientes.map((cliente) => (
                                             <MenuItem
@@ -190,12 +195,14 @@ export default function Agendamento() {
                                         label="Animal"                             
                                         value={animal}
                                         sx={{ width: '12rem', ml: '2rem', mt: '1rem' }}
+                                        size="small"
                                     ></TextField>
 
                                     <TextField
                                         label="Espécie"
                                         value={especie}
                                         sx={{ width: '8rem', ml: '2rem', mt: '1rem' }}
+                                        size="small"
                                     ></TextField>
                                 </Grid>
                             </FormControl>
